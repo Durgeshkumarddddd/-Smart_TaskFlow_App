@@ -1,184 +1,227 @@
-# 📝 Task Manager Dashboard (Angular + Spring Boot)
+🚀 Smart TaskFlow App
 
-A modern task management dashboard built using **Angular (Standalone Components)** and integrated with a Spring Boot backend API.
+Smart TaskFlow App is a Full Stack Task Management Application built using Spring Boot and Angular.
+The application helps teams and individuals efficiently manage tasks, track progress, and organize workflow.
 
-This application allows users to create, update, delete, filter, and track tasks with real-time UI updates and clean architecture.
+It includes secure authentication using JWT, task prioritization, deadline tracking, and mentor-based task assignment.
 
----
+📌 Project Overview
 
-## 🚀 Features
+Smart TaskFlow App is designed to simplify workflow management by allowing users to create, assign, monitor, and complete tasks efficiently.
 
-### ✅ Task Management
-- Add new tasks
-- Edit existing tasks
-- Delete tasks
-- Update task status
-- View task details in modal
+The system supports role-based access control, where mentors can assign tasks to users and track their progress.
 
-### ✅ Dashboard & Filtering
-- Filter tasks by:
-  - All
-  - To Do
-  - In Progress
-  - Completed
-- Dynamic task counters
-- Responsive grid layout
+This project demonstrates modern full stack development practices using Spring Boot REST APIs and Angular frontend.
 
-### ✅ UI/UX
-- Modal-based View & Edit
-- Tailwind CSS styling
-- Toast notifications using ngx-toastr
-- Clean event-driven component architecture
-- Enum-based type-safe filtering
+🛠️ Tech Stack
+Backend
 
----
+☕ Java
 
-## 🏗️ Tech Stack
+🌱 Spring Boot
 
-### Frontend
-- Angular (Standalone Components)
-- TypeScript
-- Tailwind CSS
-- ngx-toastr
+🔐 Spring Security
 
-### Backend
-- Spring Boot
-- REST APIs
-- JSON-based request/response models
+🪪 JWT Authentication
 
----
+🗄 Spring Data JPA
 
-## 📂 Project Structure
+🔗 REST APIs
 
-```
-src/
- ├── models/
- │    ├── task-response.model.ts
- │    ├── task-request.model.ts
- │    ├── update-task-request.ts
- │    └── task-status.ts
- │
- ├── service/
- │    └── task-service.ts
- │
- ├── components/
- │    ├── dashboard/
- │    ├── task-card/
- │    ├── task-modal/
- │    └── add-task/
-```
+🧩 Hibernate
 
----
+Frontend
 
-## 🔄 Application Flow
+🅰 Angular
 
-### Component Communication
+⚡ TypeScript
 
-```
-TaskCard → Dashboard → TaskModal
-TaskModal → Dashboard → TaskService → Backend API
-```
+🎨 HTML
 
----
+🎨 CSS
 
-## 🧠 Key Architectural Decisions
+🅱 Bootstrap
 
-### 1️⃣ Enum-Based Status
+Database
 
-```ts
-export enum TaskStatus {
-  TO_DO = 'TO_DO',
-  IN_PROGRESS = 'IN_PROGRESS',
-  COMPLETED = 'COMPLETED'
-}
-```
+🐬 MySQL
 
-Using enums avoids string comparison bugs and improves type safety.
+Tools
 
----
+Maven
 
-### 2️⃣ Safe Edit Pattern
+Git & GitHub
 
-Instead of mutating `@Input()` directly:
+Postman
 
-```ts
-editableTask = { ...this.task };
-```
+Spring Tool Suite / IntelliJ
 
-This prevents unintended parent state mutation and keeps cancel functionality reliable.
+VS Code
 
----
+⚙️ Key Features
+🔐 Security
 
-### 3️⃣ Immutable State Updates
+JWT Based Authentication
 
-```ts
-this.tasks = this.tasks.map(task =>
-  task.id === updated.id ? updated : task
-);
-```
+Secure Login & Registration
 
-Ensures Angular change detection works correctly.
+Role-Based Authorization
 
----
+📋 Task Management
 
-## 🛠️ Setup & Installation
+Create tasks
 
-### 1️⃣ Clone Repository
+Update tasks
 
-```bash
-git clone <your-repo-url>
-cd task-manager
-```
+Delete tasks
 
-### 2️⃣ Install Dependencies
+View all tasks
 
-```bash
+🎯 Task Workflow
+
+Set Task Priority (Low / Medium / High)
+
+Add Task Deadlines
+
+Track Task Status
+
+👨‍🏫 Mentor Features
+
+Mentors can assign tasks to users
+
+Track task progress
+
+Monitor task completion
+
+📊 Tracking
+
+Track task completion
+
+Monitor workflow progress
+
+🏗️ System Architecture
+Angular Frontend
+       │
+       │  REST API (HTTP Requests)
+       ▼
+Spring Boot Backend
+       │
+       ▼
+     MySQL Database
+📂 Project Structure
+Smart_TaskFlow_App
+│
+├── backend
+│   ├── controller
+│   ├── service
+│   ├── repository
+│   ├── model
+│   ├── security
+│   └── config
+│
+├── frontend
+│   ├── src
+│   │   ├── app
+│   │   │   ├── components
+│   │   │   ├── services
+│   │   │   ├── models
+│   │   │   └── guards
+│
+└── README.md
+▶️ How to Run the Project
+1️⃣ Clone the Repository
+git clone https://github.com/Durgeshkumarddddd/Smart_TaskFlow_App.git
+🖥 Backend Setup (Spring Boot)
+Step 1: Open the backend project in
+
+Spring Tool Suite (STS)
+
+IntelliJ IDEA
+
+Eclipse
+
+Step 2: Update Maven Dependencies
+Right Click Project → Maven → Update Project
+Step 3: Configure Database
+
+Update application.properties
+
+spring.datasource.url=jdbc:mysql://localhost:3306/taskflow_db
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+Step 4: Run the Application
+
+Run the Spring Boot main class
+
+Backend will run at:
+
+http://localhost:8080
+🌐 Frontend Setup (Angular)
+Step 1: Navigate to frontend
+cd frontend
+Step 2: Install dependencies
 npm install
-```
-
-### 3️⃣ Run Application
-
-```bash
+Step 3: Run Angular application
 ng serve
-```
 
-Open in browser:
+Frontend will run at:
 
-```
 http://localhost:4200
-```
+🔗 Example API Endpoints
+Method	Endpoint	Description
+POST	/auth/register	Register user
+POST	/auth/login	Login user
+GET	/tasks	Get all tasks
+POST	/tasks	Create task
+PUT	/tasks/{id}	Update task
+DELETE	/tasks/{id}	Delete task
+📸 Screenshots
 
----
+You can add screenshots here:
 
-## 🔌 Required Backend Endpoints
+screenshots/dashboard.png
+screenshots/create-task.png
+screenshots/task-management.png
+🧠 Learning Outcomes
 
-The frontend expects:
+This project helped in learning:
 
-- `GET /tasks`
-- `POST /tasks`
-- `PUT /tasks/{id}`
-- `PATCH /tasks/{id}/status`
-- `DELETE /tasks/{id}`
+Full Stack Development
 
----
+Spring Boot REST APIs
 
-## 📈 Future Improvements
+Angular Components & Services
 
-- Pagination
-- Search functionality
-- Drag & Drop status update
-- Authentication & role-based access
-- Angular Signals version
-- Unit testing (Jasmine/Karma)
+JWT Authentication
 
----
+Spring Security
 
-## 👨‍💻 Author
+Role-Based Authorization
 
-**Prince Kumar**  
-B.Tech – Computer Science  
-Angular & Spring Boot Developer
+Database Integration with JPA
 
----
+Client-Server Architecture
 
-⭐ If you found this project useful, feel free to star the repository.
+🚀 Future Improvements
+
+Email notifications
+
+Real-time task updates
+
+WebSocket integration
+
+Mobile responsive improvements
+
+Docker deployment
+
+Cloud deployment (AWS / Render)
+
+🤝 Contributors
+
+👨‍💻 Durgeshkumar
+
+GitHub:
+https://github.com/Durgeshkumarddddd
