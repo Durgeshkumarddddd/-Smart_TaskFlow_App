@@ -1,105 +1,85 @@
-🚀 Smart TaskFlow App
+# 🚀 Smart TaskFlow App
 
-Smart TaskFlow App is a Full Stack Task Management Application built using Spring Boot and Angular.
-The application helps teams and individuals efficiently manage tasks, track progress, and organize workflow.
+**Smart TaskFlow App** is a Full Stack Task Management Web Application built using **Spring Boot (Backend)** and **Angular (Frontend)**.  
+It helps users and teams efficiently create, assign, track, and manage tasks with secure authentication and structured workflow management.
 
-It includes secure authentication using JWT, task prioritization, deadline tracking, and mentor-based task assignment.
+The application includes **JWT-based authentication, task priority management, deadlines, mentor task assignment, and task tracking features**.
 
-📌 Project Overview
+---
 
-Smart TaskFlow App is designed to simplify workflow management by allowing users to create, assign, monitor, and complete tasks efficiently.
+# 📌 Project Overview
 
-The system supports role-based access control, where mentors can assign tasks to users and track their progress.
+Smart TaskFlow App is designed to simplify task and workflow management for teams and individuals.  
+The system allows users to create tasks, set priorities, assign deadlines, and track progress.
 
-This project demonstrates modern full stack development practices using Spring Boot REST APIs and Angular frontend.
+Mentors or managers can assign tasks to users and monitor their completion status.
 
-🛠️ Tech Stack
-Backend
+This project demonstrates **modern full stack development using Spring Boot REST APIs and Angular frontend**.
 
-☕ Java
+---
 
-🌱 Spring Boot
+# 🛠️ Tech Stack
 
-🔐 Spring Security
+## Backend
+- Java
+- Spring Boot
+- Spring Security
+- JWT Authentication
+- Spring Data JPA
+- Hibernate
+- REST APIs
 
-🪪 JWT Authentication
+## Frontend
+- Angular
+- TypeScript
+- HTML
+- CSS
+- Bootstrap
 
-🗄 Spring Data JPA
+## Database
+- MySQL
 
-🔗 REST APIs
+## Tools
+- Maven
+- Git & GitHub
+- Postman
+- Spring Tool Suite / IntelliJ
+- VS Code
 
-🧩 Hibernate
+---
 
-Frontend
+# ⚙️ Key Features
 
-🅰 Angular
+### 🔐 Security
+- JWT Based Authentication
+- Secure Login and Registration
+- Role-Based Authorization
 
-⚡ TypeScript
+### 📋 Task Management
+- Create Tasks
+- Update Tasks
+- Delete Tasks
+- View All Tasks
 
-🎨 HTML
+### 🎯 Task Workflow
+- Set **Task Priority (Low / Medium / High)**
+- Add **Task Deadlines**
+- Track **Task Status**
 
-🎨 CSS
+### 👨‍🏫 Mentor Features
+- Mentors can assign tasks to users
+- Track task progress
+- Monitor task completion
 
-🅱 Bootstrap
+### 📊 Tracking
+- Track task progress
+- Monitor workflow efficiency
 
-Database
+---
 
-🐬 MySQL
+# 🏗️ System Architecture
 
-Tools
-
-Maven
-
-Git & GitHub
-
-Postman
-
-Spring Tool Suite / IntelliJ
-
-VS Code
-
-⚙️ Key Features
-🔐 Security
-
-JWT Based Authentication
-
-Secure Login & Registration
-
-Role-Based Authorization
-
-📋 Task Management
-
-Create tasks
-
-Update tasks
-
-Delete tasks
-
-View all tasks
-
-🎯 Task Workflow
-
-Set Task Priority (Low / Medium / High)
-
-Add Task Deadlines
-
-Track Task Status
-
-👨‍🏫 Mentor Features
-
-Mentors can assign tasks to users
-
-Track task progress
-
-Monitor task completion
-
-📊 Tracking
-
-Track task completion
-
-Monitor workflow progress
-
-🏗️ System Architecture
+```
 Angular Frontend
        │
        │  REST API (HTTP Requests)
@@ -108,7 +88,13 @@ Spring Boot Backend
        │
        ▼
      MySQL Database
-📂 Project Structure
+```
+
+---
+
+# 📂 Project Structure
+
+```
 Smart_TaskFlow_App
 │
 ├── backend
@@ -128,100 +114,142 @@ Smart_TaskFlow_App
 │   │   │   └── guards
 │
 └── README.md
-▶️ How to Run the Project
-1️⃣ Clone the Repository
+```
+
+---
+
+# ▶️ How to Run the Project
+
+## 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/Durgeshkumarddddd/Smart_TaskFlow_App.git
-🖥 Backend Setup (Spring Boot)
-Step 1: Open the backend project in
+```
 
-Spring Tool Suite (STS)
+---
 
-IntelliJ IDEA
+# 🖥 Backend Setup (Spring Boot)
 
-Eclipse
+### Step 1: Open backend project in
 
-Step 2: Update Maven Dependencies
-Right Click Project → Maven → Update Project
-Step 3: Configure Database
+- Spring Tool Suite (STS)
+- IntelliJ IDEA
+- Eclipse
 
-Update application.properties
+### Step 2: Update Maven Dependencies
 
+Right Click Project → **Maven → Update Project**
+
+### Step 3: Configure Database
+
+Update `application.properties`
+
+```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/taskflow_db
 spring.datasource.username=root
 spring.datasource.password=yourpassword
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
-Step 4: Run the Application
+```
 
-Run the Spring Boot main class
+### Step 4: Run Application
 
-Backend will run at:
+Run the **Spring Boot main class**
 
+Backend will start at:
+
+```
 http://localhost:8080
-🌐 Frontend Setup (Angular)
-Step 1: Navigate to frontend
+```
+
+---
+
+# 🌐 Frontend Setup (Angular)
+
+### Step 1: Navigate to frontend folder
+
+```bash
 cd frontend
-Step 2: Install dependencies
+```
+
+### Step 2: Install dependencies
+
+```bash
 npm install
-Step 3: Run Angular application
+```
+
+### Step 3: Run Angular application
+
+```bash
 ng serve
+```
 
 Frontend will run at:
 
+```
 http://localhost:4200
-🔗 Example API Endpoints
-Method	Endpoint	Description
-POST	/auth/register	Register user
-POST	/auth/login	Login user
-GET	/tasks	Get all tasks
-POST	/tasks	Create task
-PUT	/tasks/{id}	Update task
-DELETE	/tasks/{id}	Delete task
-📸 Screenshots
+```
 
-You can add screenshots here:
+---
 
+# 🔗 Example API Endpoints
+
+| Method | Endpoint | Description |
+|------|------|------|
+| POST | /auth/register | Register User |
+| POST | /auth/login | Login User |
+| GET | /tasks | Get All Tasks |
+| POST | /tasks | Create Task |
+| PUT | /tasks/{id} | Update Task |
+| DELETE | /tasks/{id} | Delete Task |
+
+---
+
+# 📸 Screenshots
+
+You can add screenshots here.
+
+Example:
+
+```
 screenshots/dashboard.png
 screenshots/create-task.png
 screenshots/task-management.png
-🧠 Learning Outcomes
+```
 
-This project helped in learning:
+---
 
-Full Stack Development
+# 🧠 Learning Outcomes
 
-Spring Boot REST APIs
+- Full Stack Development using Spring Boot and Angular
+- Spring Security and JWT Authentication
+- REST API Development
+- Angular Components and Services
+- Role-Based Authorization
+- Database Integration using JPA/Hibernate
+- Client-Server Architecture
 
-Angular Components & Services
+---
 
-JWT Authentication
+# 🚀 Future Improvements
 
-Spring Security
+- Email notifications
+- Real-time task updates
+- WebSocket integration
+- Mobile responsive improvements
+- Docker deployment
+- Cloud deployment (AWS / Render)
 
-Role-Based Authorization
+---
 
-Database Integration with JPA
+# 🤝 Contributor
 
-Client-Server Architecture
+👨‍💻 **Durgeshkumar**
 
-🚀 Future Improvements
-
-Email notifications
-
-Real-time task updates
-
-WebSocket integration
-
-Mobile responsive improvements
-
-Docker deployment
-
-Cloud deployment (AWS / Render)
-
-🤝 Contributors
-
-👨‍💻 Durgeshkumar
-
-GitHub:
+GitHub:  
 https://github.com/Durgeshkumarddddd
+
+---
+
+⭐ If you like this project, please give it a **Star on GitHub**.
